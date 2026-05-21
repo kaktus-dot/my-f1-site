@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Твоє Ім'я — F1 Driver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= НАВІГАЦІЯ ======= -->
+  <div class="top-bar"></div>
+  <nav class="navbar">
+    <div class="nav-logo">F1</div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-tab active" data-tab="home">Головна</a></li>
+      <li><a href="#" class="nav-tab" data-tab="bio">Біографія</a></li>
+      <li><a href="#" class="nav-tab" data-tab="stats">Статистика</a></li>
+      <li><a href="#" class="nav-tab" data-tab="gallery">Галерея</a></li>
+      <li><a href="#" class="nav-tab" data-tab="contact">Контакти</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
+  </nav>
+
+  <!-- ======= ГОЛОВНА ======= -->
+  <section class="tab-content active" id="tab-home">
+    <div class="hero">
+      <div class="hero-number">1</div>
+      <div class="hero-text">
+        <p class="hero-firstname">Ілля</p>
+        <h1 class="hero-lastname">Яременко</h1>
+        <p class="hero-team">🏎️ НФМЛ · Україна 🏁</p>
+        <p class="hero-quote">"Справжнє щастя приходить від ваших друзів, родини та близьких"</p>
+        <button class="btn-red" onclick="switchTab('bio')">Дізнатись більше</button>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-num" id="counter-races">0</span>
+        <span class="stat-label">Гонок</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="counter-wins">0</span>
+        <span class="stat-label">Перемог</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="counter-poles">0</span>
+        <span class="stat-label">Поулів</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" id="counter-champs">0</span>
+        <span class="stat-label">Чемпіонств</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= БІОГРАФІЯ ======= -->
+  <section class="tab-content" id="tab-bio">
+    <div class="page-header">
+      <h2>БІОГРАФІЯ</h2>
+      <div class="red-line"></div>
+    </div>
+    <div class="bio-grid">
+      <div class="bio-card">
+        <div class="bio-avatar">ТП</div>
+        <table class="bio-table">
+          <tr><td class="label">Повне ім'я</td><td>Ілля</td></tr>
+          <tr><td class="label">Дата народження</td><td>02 Серпня 2008</td></tr>
+          <tr><td class="label">Місце народження</td><td>Дніпро, Україна</td></tr>
+          <tr><td class="label">Національність</td><td>🇺🇦 Українець</td></tr>
+          <tr><td class="label">Команда</td><td>НФМЛ</td></tr>
+          <tr><td class="label">Номер</td><td>#1</td></tr>
+        </table>
+      </div>
+      <div class="bio-text-block">
+        <h3>Ранні роки</h3>
+        <p>Я виріс у невеликому місті, з дитинства любив техніку, комп’ютери та цікавився автомобілями.</p>
+
+        <h3>Кар'єра</h3>
+        <p>Під час навчання я почав розвивати свої навички у програмуванні та створенні сайтів, що стало важливим етапом у моєму розвитку.</p>
+
+        <h3>Сьогодні</h3>
+        <p>Зараз я навчаюся, працюю над власними проєктами та мрію досягти успіху у сфері IT.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <h3 class="timeline-title">ХРОНОЛОГІЯ</h3>
+      <div class="timeline-item">
+        <div class="timeline-year">2008</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">Народився в Дніпрі, Україна</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">Перші кроки у своїй справі</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">Важливе досягнення або подія</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-desc">Ще одне досягнення</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-dot active"></div>
+        <div class="timeline-desc">Зараз — нові цілі та амбіції</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= СТАТИСТИКА ======= -->
+  <section class="tab-content" id="tab-stats">
+    <div class="page-header">
+      <h2>СТАТИСТИКА</h2>
+      <div class="red-line"></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-card-num">42</span>
+        <span class="stat-card-label">Гонок проведено</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-num">12</span>
+        <span class="stat-card-label">Перших місць</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-num">8</span>
+        <span class="stat-card-label">Поул-позицій</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-num">3</span>
+        <span class="stat-card-label">Чемпіонств</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-num">95%</span>
+        <span class="stat-card-label">Процент завершення</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card-num">280</span>
+        <span class="stat-card-label">Очок набрано</span>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h3>НАВИЧКИ</h3>
+      <div class="skill-bar-wrap">
+        <span class="skill-name">Швидкість</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        <span class="skill-pct">92%</span>
+      </div>
+      <div class="skill-bar-wrap">
+        <span class="skill-name">Стратегія</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-bar-wrap">
+        <span class="skill-name">Командна робота</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+        <span class="skill-pct">88%</span>
+      </div>
+      <div class="skill-bar-wrap">
+        <span class="skill-name">Концентрація</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+        <span class="skill-pct">95%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ГАЛЕРЕЯ ======= -->
+  <section class="tab-content" id="tab-gallery">
+    <div class="page-header">
+      <h2>ГАЛЕРЕЯ</h2>
+      <div class="red-line"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/photo1.jpg" alt="Фото 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo2.jpg" alt="Фото 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="himages/photo3.jpg" alt="Фото 3" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo4.jpg" alt="Фото 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo5.jpg" alt="Фото 5" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/photo6.jpg" alt="Фото 6" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= КОНТАКТИ ======= -->
+  <section class="tab-content" id="tab-contact">
+    <div class="page-header">
+      <h2>КОНТАКТИ</h2>
+      <div class="red-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Зв'яжись зі мною</h3>
+        <p>📧 email@example.com</p>
+        <p>📱 +380 XX XXX XXXX</p>
+        <p>🌐 your-website.com</p>
+        <div class="social-links">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+          <a href="#" class="social-btn">GitHub</a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="sendForm(event)">
+        <input type="text" placeholder="Твоє ім'я" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Повідомлення" rows="5" required></textarea>
+        <button type="submit" class="btn-red">Надіслати</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>© 2026 Ілля · Всі права захищені</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
